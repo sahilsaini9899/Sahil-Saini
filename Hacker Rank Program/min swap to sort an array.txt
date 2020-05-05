@@ -1,0 +1,42 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int i,j,arr[100000],n,t=0,temp[100000];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+   for(i=0;i<n-1;i++)
+   {
+       if(arr[i]!=i+1)
+       {
+         temp[i]=arr[i];
+         arr[i]=i+1;
+         t++;
+         for(j=0;j<n;j++)
+         {
+             if(arr[j]==i+1)
+             {
+                 arr[j]=temp[i];
+             }
+        
+         }
+       }
+     
+   }
+    printf("%d",t);
+    return 0;
+}
+
+  
