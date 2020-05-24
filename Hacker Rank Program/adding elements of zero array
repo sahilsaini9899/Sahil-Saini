@@ -1,0 +1,9 @@
+inputs = list(map(int,input().split()[:2]))
+matrix=[]
+lis=[0]*inputs[0]
+for i in range(inputs[1]):
+    a=list(map(int,input().split()[:3]))
+    matrix.append(a)
+    for j in range(matrix[i][0],(matrix[i][1])+1):
+         lis[j-1]+=matrix[i][2]
+print(max(lis))
