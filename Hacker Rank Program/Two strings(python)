@@ -1,0 +1,16 @@
+put=int(input())
+arr=[]
+for i in range(put):
+    token=[]
+    ap=[]
+    a=input()
+    b=input()
+    for j in range(len(a)):
+        if a[j] in b:
+            token.append("yes")
+    if "yes" not in token:
+        print("NO")
+    else:
+        print("YES") 
+
+    
