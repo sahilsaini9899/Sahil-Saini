@@ -1,0 +1,18 @@
+put=list(map(int,input().split()[:2]))
+mag=list(map(str,input().split()[:put[0]]))
+note=list(map(str,input().split()[:put[1]]))
+for i in range(put[1]):
+    if note[0+i] in mag:
+        mag.remove(note[0+i])
+        if i>20000:
+            print("Yes")
+            break
+        if i==put[1]-1:
+            print("Yes")
+            break
+        pass
+    else:
+        print("No")
+        break
+
+       
