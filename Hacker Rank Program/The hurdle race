@@ -1,0 +1,7 @@
+n=list(map(int,input().split()[:2]))
+arr=list(map(int,input().split()[:n[0]]))
+a=max(arr)
+if a<=n[1]:
+    print(0)
+else:
+    print(a-n[1])
