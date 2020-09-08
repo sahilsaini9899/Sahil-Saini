@@ -1,0 +1,11 @@
+n=int(input())
+for i in range(n):
+    arr=list(str(input()))
+    s=len(arr)
+    count=0
+    for j in range(s):
+        if arr[j]!=arr[-(j+1)]:
+            dif=abs(ord(arr[j])-ord(arr[-(j+1)]))
+            arr[-(j+1)]=arr[j]
+            count+=dif
+    print(count)  
