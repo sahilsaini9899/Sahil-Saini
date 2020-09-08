@@ -1,0 +1,8 @@
+arr = list(map(int, input().rstrip().split()))
+word=list(input())
+l=[]
+for i in range(len(word)):
+    a=ord(word[i])-97
+    l.append(arr[a])
+b=max(l)
+print(b*len(word))
