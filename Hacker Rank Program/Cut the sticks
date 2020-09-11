@@ -1,0 +1,11 @@
+n=int(input())
+arr=list(map(int,input().split()[:n]))
+while(arr!=[]):
+    b=[]
+    print(len(arr))
+    a=min(arr)
+    for j in range(len(arr)):
+        arr[j]-=a
+        if arr[j]!=0:
+            b.append(arr[j])
+    arr=b
