@@ -1,0 +1,23 @@
+n=int(input())
+m=int(input())
+count=0
+for i in range(n,m+1):
+    if i==1:
+        print(i, end =' ')
+    elif i==2 or i==3:
+        pass
+    else:
+        t=(i*i)
+        t=list(str(t))
+        leng=len(t)
+        a=[]
+        for j in range(int(leng/2)):
+            a.append(t[0])
+            t.remove(t[0])
+        sum1=("".join(a))
+        sum2=("".join(t))
+        if int(sum1)+int(sum2)==i:
+            print(i,end=" ")
+            count+=1
+if count==0:
+    print("INVALID RANGE")
