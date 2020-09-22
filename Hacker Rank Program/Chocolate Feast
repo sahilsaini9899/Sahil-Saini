@@ -1,0 +1,12 @@
+n=int(input())
+def count(p,m):
+    b=int(p/m)
+    return(b)
+for i in range(n):
+    arr=list(map(int,input().split()[:3]))
+    wraps=int(arr[0]/arr[1])
+    count1=int(arr[0]/arr[1])
+    while(wraps>=arr[2]):
+        count1+=count(wraps,arr[2])
+        wraps=(wraps%arr[2])+int(wraps/arr[2])
+    print(count1)
