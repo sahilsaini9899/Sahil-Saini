@@ -1,0 +1,17 @@
+n=list(map(int,input().split()[:2]))
+arr=[]
+for i in range(n[0]):
+    a=(input())
+    a=list(a)
+    arr.append(a)
+res=[]
+for j in range(n[0]-1):
+    for k in range(j+1,n[0]):
+        num=0
+        for t in range(n[1]):
+            if arr[j][t]=='1' or arr[k][t]=='1':
+                num+=1
+        res.append(num)
+a=max(res)
+print(a)
+print(res.count(a))
