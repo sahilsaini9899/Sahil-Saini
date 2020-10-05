@@ -1,0 +1,17 @@
+n=int(input())
+for i in range(n):
+    a=input()
+    a=list(a)
+    arr=[]
+    arr1=[]
+    for j in range(len(a)):
+        if j<len(a)-1:
+            dif=abs(ord(a[j])-ord(a[j+1]))
+        if j<len(a)-1:
+            diff1=abs(ord(a[-(j+1)])-ord(a[-(j+2)]))
+        arr.append(dif)
+        arr1.append(diff1)
+    if arr==arr1:
+        print('Funny')
+    else:
+        print('Not Funny')
