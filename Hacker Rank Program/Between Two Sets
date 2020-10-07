@@ -1,0 +1,20 @@
+n=list(map(int,input().split()[:2]))
+a=list(map(int,input().split()[:n[0]]))
+b=list(map(int,input().split()[:n[1]]))
+mi=max(a)
+r=max(a)
+ma=min(b)
+arr=[]
+while mi<=ma:
+    count=0
+    count1=0
+    for j in range(len(a)):
+        if mi%a[j]==0:
+            count+=1 
+    for k in range(len(b)):
+        if b[k]%mi==0:
+            count1+=1
+    if count==len(a) and count1==len(b):
+        arr.append(mi)
+    mi+=r  
+print(len(arr))
