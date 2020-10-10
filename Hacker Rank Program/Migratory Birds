@@ -1,0 +1,10 @@
+n=int(input())
+arr=list(map(int,input().split()[:n]))
+brr=set(arr)
+max=0
+for i in brr:
+    b=arr.count(i)
+    if b>max:
+        max=b
+        ans=i
+print(ans)
