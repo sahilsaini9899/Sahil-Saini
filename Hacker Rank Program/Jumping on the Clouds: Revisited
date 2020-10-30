@@ -1,0 +1,20 @@
+n=list(map(int,input().split()[:2]))
+arr=list(map(int,input().split()[:n[0]]))
+flag=True
+k=n[1]
+b=0
+key=100
+while flag:
+    b+=k
+    if b<n[0]:
+        c=arr[b]
+    else:
+        b=b-n[0]
+        c=arr[b]
+    if c==1:
+        key-=3
+    else:
+        key-=1
+    if b==0:
+        flag=False
+print(key)
